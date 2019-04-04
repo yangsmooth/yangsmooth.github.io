@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>主页</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/audioplayer.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"></script>
+		<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container-fiuled">
+					<!--logo-->
+					<div class="nav-logo pull-left"><i class="fa fa-space-shuttle pull-left"></i>
+						<a href="#" class="pull-left"><strong>That Girl</strong></a>
+					</div>
+					<!--messages-->
+					<div class="nav-messages pull-left">
+						<ul>
+							<li class="nav-messages-list">
+								<a href="#" data-toggle="tooltip" data-placement="bottom" title="菜单"><i class="fa fa-bars"></i></a>
+							</li>
+							<li class="nav-messages-list">
+								<a href="#" data-toggle="tooltip" data-placement="bottom" title="信息"><i class="fa fa-envelope-o"></i></a>
+							</li>
+							<li class="nav-messages-list">
+								<a href="#" data-toggle="tooltip" data-placement="bottom" title="提醒"><i class="fa fa-snapchat-ghost"></i></a>
+							</li>
+							<li class="nav-messages-list">
+								<a href="#" data-toggle="tooltip" data-placement="bottom" title="通知"><i class="fa fa-bullhorn"></i></a>
+							</li>
+							<div class="nav-messages-research">
+								<form class="nav navbar-form" action="#">
+									<input type="text" class="navbar-form-search" placeholder="请输入你搜索的内容">
+									<a class="navbar-form-a" data-toggle="tooltip" data-placement="bottom" title="搜索"><i class="fa fa-search"></i></a>
+								</form>
+							</div>
+						</ul>
+					</div>
+					<div class="nav-user pull-right">
+						<ul>
+							<li class="user-list">
+								<a href="#" class="userImg" data-toggle="modal" data-target="#user-image" title="点击更换头像"><img src="img/3.jpg" class="img-circle" style="border-radius:50%;width:30px;height:30px" alt="headimg"></a>
+								<!--切换用户头像（Modal）-->
+								<div class="modal fade" id="user-image" tabindex="-1" role="imamge" aria-labelledby="myuser-image" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header" style="background-color: cyan;">
+												<h5 class="modal-title" id="myModalLabel" style="display:block;margin-left:50px;">更换照片</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="background-color: cyan;outline: none;">&times;</button>
+											</div>
+											<div class="modal-body" style="width: auto;height: 220px;">
+												<img src="img/3.jpg" class="img-circle" id="preview" style="display: block;width:180px;height:180px;margin-bottom: 5px;" alt="选择的图片">
+												<input type="file" id="updateuserImg" onclick="updateUserImg()" />
+											</div>
+											<div class="modal-footer">
+												<button type="submit" class="btn btn-default" id="updateSubmit" data-dismiss="modal" onclick="updateAllUserImg()">提交</button>
+												<button type="button" class="btn btn-primary" data-dismiss="modal">返回</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="user-list dropdown">
+								<a class="username-name dropdown-toggle" data-toggle="dropdown" title="User"><strong>that girl</strong>
+									<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#" data-toggle="modal" data-target="#myModal">切换用户可点击</a>
+									</li>
+									<li>
+										<a href="#">个人中心</a>
+									</li>
+									<li>
+										<a href="#">意见反馈</a>
+									</li>
+									<li>
+										<a href="#">账号设置</a>
+									</li>
+									<li>
+										<a href="#">退出</a>
+									</li>
+								</ul>
+							</li>
+							<!--切换用户模态框（Modal）-->
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header" style="background-color: cyan;">
+											<h5 class="modal-title" id="myModalLabel" style="margin: auto 43px;">登录</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="background-color: cyan;outline: none;">&times;</button>
+										</div>
+										<div class="modal-body" style="padding: 20px 60px;">
+											<form class="bs-example bs-example-form" role="form">
+												<div class="input-group">
+													<span class="input-group-addon">账号：</span>
+													<input type="text" class="form-control" placeholder="that girl">
+												</div>
+												<br>
+												<div class="input-group">
+													<span class="input-group-addon">密码：</span>
+													<input type="text" class="form-control">
+												</div>
+											</form>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">登录</button>
+											<button type="button" class="btn btn-primary" data-dismiss="modal">退出</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<li class="user-list ">
+								<a href="# " class="userMs popover-toggle " data-toggle="tooltip " data-container="body " data-placement="bottom " data-delay='{"show ":"0 ","hide ": "100 "}' title="消息 "><i class="fa fa-commenting "></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--中间-->
+		<div class="main">
+			<div class="container-fiuled">
+				<div class="row">
+					<!--main-left部分-->
+					<div class="main-left col-sm-2">
+						<div class="main-left-user">
+							<img src="img/3.jpg " class="userImg img-circle " alt="headimg ">
+							<div class="username" style="margin-left:70px">
+								<h6 class="username-name">that girl</h6>
+								<label class="username-introduce"><small>There's a girl but I let her get away</small></label>
+							</div>
+						</div>
+						<div class="panel-group" id="accordion" style="text-indent: 10px;">
+							<div class="panel panel-default">
+								<label>Introduction</label></br>
+								<div class="card-heading" data-toggle="collapse" href="#collapseOne">
+									<i class="fa fa-file-text text-info"></i>&nbsp;&nbsp;点击打开一
+								</div>
+								<div id="collapseOne" class="collapse" data-parent="#accordion">
+									<ul class="card-body">
+										<li class="collapseOne-one">
+											<a class="card-link" data-toggle="collapse">选项一 1.1</a>
+										</li>
+										<li class="collapseOne-two">
+											<a class="card-link" data-toggle="collapse" href="#">选项一 1.2</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<label>Tradition</label></br>
+								<div class="card-heading" data-toggle="collapse" href="#collapseTwo">
+									<i class="fa fa-envelope text-warning"></i>&nbsp;&nbsp;点击打开二
+									<span class="badge pull-right">4</span>
+								</div>
+								<div id="collapseTwo" class="collapse" data-parent="#accordion">
+									<ul class="card-body">
+										<li class="collapseTwo-one">
+											<a class="card-link" data-toggle="collapse" href="#">选项一 2.1</a>
+										</li>
+										<li class="collapseTwo-two">
+											<a class="card-link" data-toggle="collapse" href="#">选项一 2.2</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<label>Point</label></br>
+								<div class="card-heading" data-toggle="collapse" href="#collapseThree">
+									<i class="fa fa-sticky-note text-danger"></i>&nbsp;&nbsp;点击打开三
+								</div>
+								<div id="collapseThree" class="collapse" data-parent="#accordion">
+									<ul class="card-body">
+										<li class="collapseThree-one">
+											<a class="card-link" data-toggle="collapse" href="#">选项一 3.1</a>
+										</li>
+										<li class="collapseThree-two">
+											<a class="card-link" data-toggle="collapse" href="#">选项一 3.2</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--main-right主要部分-->
+					<div class="main-right col-sm-10">
+						<div class="clickpage">
+							<div class="main-right-title">
+								<h2>Mailbox</h2>
+							</div>
+							<!--轮播-->
+							<div id="carouselControls" class="carousel slide" data-ride="carousel" data-interval="1000">
+								<ol class="carousel-indicators">
+									<li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+									<li data-target="#carouselIndicators" data-slide-to="1"></li>
+									<li data-target="#carouselIndicators" data-slide-to="2"></li>
+								</ol>
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<img class="d-block w-100" src="img/love1.jpg" alt="First slide">
+									</div>
+									<div class="carousel-item">
+										<img class="d-block w-100" src="img/love2.jpg" alt="Second slide">
+									</div>
+									<div class="carousel-item">
+										<img class="d-block w-100" src="img/love3.jpg" alt="Third slide">
+									</div>
+								</div>
+								<a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+							<!--content-->
+							<div class="main-rightpage row">
+								<div class="hidepage-item col-sm-3">
+									<label class="hidepage-item-label">Compose</label>
+									<ul>
+										<li class="hidepage-item-name">
+											<a href="# " class="text-dark"><i class="fa fa-file-o"></i>&nbsp;&nbsp;<span class="badge pull-right">3</span>文档</a>
+										</li>
+										<li class="hidepage-item-name">
+											<a href="# " class="text-dark"><i class="fa fa-send text-success"></i>&nbsp;&nbsp;introduction</a>
+										</li>
+										<li class="hidepage-item-name">
+											<a href="# " class="text-dark"><i class="fa fa-credit-card text-info"></i>&nbsp;&nbsp;<span class="badge pull-right">3</span>卡包</a>
+										</li>
+										<li class="hidepage-item-name">
+											<a href="# " class="text-dark"><i class="fa fa-address-card-o text-success"></i>&nbsp;&nbsp;important</a>
+										</li>
+										<li class="hidepage-item-name">
+											<a href="# " class="text-dark"><i class="fa fa-flag"></i>&nbsp;&nbsp;Delet</a>
+										</li>
+									</ul>
+								</div>
+								<div class="Item-inform col-sm-9">
+									<ul class="nav inform-view">
+										<li class="pull-left">
+											<h5 style="padding-top: 5px;">View</h5></li>
+										<li class="pull-left">
+											<a href="#" title="刷新"><i class="fa fa-refresh text-dark"></i></a>
+										</li>
+										<li class="pull-left">
+											<a href="#" title="查找"><i class="fa fa-search text-dark"></i></a>
+										</li>
+										<li class="Item-inform-setting pull-right">
+											<a href="#" title="设置"><i class="fa fa-spin fa-gear"></i></a>
+										</li>
+									</ul>
+									<ul class="nav inform-manage">
+										<li>
+											<h5>New Project Alloted to your team.</h5></li>
+										<li class="content-btn">
+											<button class="btnreply" title="上一页"><i class="fa fa-reply"></i></button>
+											<button class="btnreply-all" title="返回首页"><i class="fa fa-reply-all"></i></button>
+											<button class="btnshare" title="下一页"><i class="fa fa-share"></i></button>
+											<button class="btntrash" title="删除"><i class="fa fa-trash"></i></button>
+										</li>
+									</ul>
+									<div class="inform-show">
+										<span class="page-show">当前页：</span>
+										<div id="lyric">
+											<h4>歌曲：that girl</h4>
+											<div class="tabPane">
+												<ul id="roll" style="margin-top:0px;">
+													<li id="li0" style="top:0px;">
+														<p style="top:0px;">There's a girl but I let her get away</p>
+														<p>曾经心爱的女孩 我却让她擦肩而过</p>
+													</li>
+													<li id="li1" style="top:60px">
+														<p>It's all my fault cause pride got in the way</p>
+														<p>自尊心作祟 一切都是我的错</p>
+													</li>
+													<li id="li2" style="top:120px">
+														<p>And I'd be lying if I said I was ok</p>
+														<p>若说无事 其实只是谎言未戳破</p>
+													</li>
+													<li id="li3" style="top:180px">
+														<p>About that girl the one I let get away </p>
+														<p>那个女孩 我们曾擦肩而过</p>
+													</li>
+													<li id="li4" style="top:240px">
+														<p>I keep saying no </p>
+														<p>我一直否认</p>
+													</li>
+													<li id="li5" style="top:300px">
+														<p>This can't be the way we're supposed to be</p>
+														<p>这不该是我们的结果</p>
+													</li>
+													<li id="li6" style="top:360px">
+														<p>I keep saying no</p>
+														<p>我一直否认</p>
+													</li>
+													<li id="li7" style="top:420px">
+														<p>There's gotta be a way to get you close to me </p>
+														<p>一定还有办法让我们重新来过</p>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div id="wrapper">
+											<audio preload="auto" controls>
+												<source src="media/林俊杰 - 醉赤壁.mp3">
+												<source src="media/林俊杰 - 醉赤壁.ogg">
+												<source src="media/林俊杰 - 醉赤壁.wav">
+											</audio>
+										</div>
+									</div>
+									<!--<div class="inform-content form-group ">
+										<label class="sr-only" for="inputfile">文件输入</label>
+										<input type="file" id="inputfile">
+									</div>-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
