@@ -1,0 +1,404 @@
+html {
+	overflow-x: hidden;
+}
+
+
+/*点击后去除边框*/
+
+a,
+button,
+input {
+	text-decoration: none;
+	outline: none;
+}
+
+img,
+fieldset {
+	border: 0 none;
+}
+.navbar-fixed-top {
+	height: 40px;
+	background-color: darkslateblue;
+}
+
+.navbar-inner {
+	width: 100%;
+}
+
+.navbar-inner .container-fiuled {
+	padding-top: 10px;
+	width: inherit;
+	height: 100%;
+}
+.nav-logo a {
+	color: black;
+	font-size: larger;
+}
+
+.nav-messages {
+	margin-left: 60px;
+}
+
+.nav-messages-list {
+	margin: auto 5px;
+	width: 30px;
+	display: inline;
+}
+
+.nav-messages-list a,
+.userMs,
+.navbar-form-a i{
+	color: #DCDCDC;
+}
+
+.nav-messages-list a:hover,
+.userMs:hover {
+	color: white;
+}
+
+.nav-messages-research {
+	position: absolute;
+	margin-left: 20px;
+	display: inline;
+}
+
+.navbar-form-search {
+	height: 30px;
+	width: 200px;
+	margin-top: -5px;
+	border-radius: 4px;
+	text-indent: 4px;
+	font-size: 12px;
+	color: dimgrey;
+}
+
+.navbar-form-a {
+	cursor: pointer;
+	display: block;
+	height: 40px;
+	width: 28px;
+	margin-top:-10px;
+	padding: 10px 7px;
+}
+
+.navbar-form-a:hover>.fa-search {
+	color:black;
+}
+
+.nav-user .user-list {
+	margin-left: 10px;
+	float: left;
+}
+
+.user-list .userMs {
+	display: block;
+	height: 30px;
+	width: 28px;
+}
+.user-list .userImg{
+	display: block;
+	margin-top: -5px;
+}
+.user-list .username-name {
+	cursor: pointer;
+	margin: -10px 5px -10px 0px;
+	padding-left: 5px;
+	display: block;
+	padding-top: 12px;
+	width: 100%;
+	height: 50px;
+}
+
+.user-list .username-name:hover {
+	background-color: white;
+}
+
+.dropdown-menu {
+	background: darkslateblue;
+	border-radius: 0px;
+	border: none;
+	top: 28px;
+	left: auto;
+	min-width: 110px;
+	padding: 0;
+}
+
+.dropdown-menu:hover>.username-name {
+	background-color: white;
+}
+
+.dropdown-menu li {
+	background: darkslateblue;
+	font-size: small;
+	height: 30px;
+	text-indent: 10px;
+}
+
+.dropdown-menu li:hover {
+	background-color: midnightblue;
+}
+
+.dropdown-menu li a {
+	color: white;
+	display: block;
+	padding-top: 5px;
+}
+
+#user-image {
+	top: 20%;
+}
+
+#user-image .modal-dialog {
+	max-width: 215px;
+}
+
+#myModal {
+	top: 25%;
+}
+
+
+/*main-left部分*/
+
+.main-left {
+	padding-right: 0px;
+	border-right: 1px solid gainsboro;
+}
+
+.main-left-user {
+	display: block;
+	height: 100px;
+	margin: 0px 0px 10px 5px;
+}
+
+.main-left-user .userImg {
+	display: block;
+	position: absolute;
+	margin: 20px 5px 5px 15px;
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+}
+
+.main-left-user .username-name {
+	color: black;
+	padding: 15px 0px 5px 0px;
+}
+
+.main-left-user .username-introduce {
+	line-height:20px ;
+	display: block;
+	padding-right: 3px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.main-left label {
+	color: gray;
+}
+
+#accordion .card-heading {
+	font-size: 13px;
+	padding-top: 14px;
+	height: 40px;
+}
+
+#accordion .card-heading span {
+	margin-top: -3px;
+	text-indent: 0px;
+	background-color: red;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+#accordion .card-heading:hover {
+	cursor: pointer;
+	background-color: gray;
+}
+
+.card-body {
+	display: block;
+	padding: 0px 0px 0px 0px;
+	margin: 0px;
+}
+
+.card-body li {
+	display: block;
+	padding:5px 0px 0px 28px;
+	height: 40px;
+}
+
+.card-body li:hover {
+	cursor: pointer;
+	background-color: gray;
+}
+
+.card-body li .card-link {
+	color: black;
+	display: block;
+	position: absolute;
+	margin-top: 10px;
+	font-size: 13px;
+}
+
+
+/*main-right隐藏部分*/
+
+.main-right {
+	background-color: azure;
+}
+
+.main-rightpage {
+	display: none;
+}
+.main-right-title{
+	margin: 8px 0px 15px 0px;
+}
+
+.hidepage-item .hidepage-item-label {
+	background-color: darkblue;
+	padding-top: 10px;
+	margin-bottom: 25px;
+	text-align: center;
+	width: inherit;
+	height: 40px;
+	color: white;
+}
+
+.hidepage-item ul {
+	background-color: white;
+	height: 100%;
+}
+
+.hidepage-item-name {
+	height: 40px;
+	font-size: 13px;
+	padding: 15px 0px 0px 10px;
+}
+
+.hidepage-item-name .badge {
+	color: white;
+	width: 18px;
+	height: 18px;
+	margin-top: -4px;
+	margin-right: 10px;
+	background-color: darkblue;
+	border-radius: 50%;
+}
+
+.hidepage-item-name:hover {
+	background-color: gray;
+}
+
+.badge {
+	margin-top: 2px;
+}
+
+.Item-inform {
+	display: none;
+	padding: 0px 15px 0px 0px;
+	background-color: white;
+}
+
+.Item-inform ul li {
+	margin: 6px 6px 4px 10px;
+}
+
+.Item-inform ul li a i {
+	margin-top: 7px;
+}
+
+.Item-inform-setting {
+	position: absolute;
+	right: 5%;
+}
+
+.Item-inform-setting a i {
+	color: blue;
+}
+
+.content-btn {
+	position: absolute;
+	right: 5%;
+}
+
+.content-btn button {
+	width: 25px;
+	height: 25px;
+}
+
+.content-btn button i {
+	display: block;
+	font-size: 13px;
+}
+
+.Item-inform .inform-view,
+.Item-inform .inform-manage {
+	/*display: block;*/
+	height: 40px;
+	padding-bottom: 5px;
+	background-color: #DCDCDC;
+}
+
+.Item-inform .inform-show {
+	padding-top: 30px;
+	font-size: 22px;
+	height: 500px;
+	background-size: cover;
+	background-image: url(../img/海贼王.jpg);
+}
+
+.Item-inform .inform-show .page-show {
+	color: crimson;
+	margin-top: -10px;
+	position: absolute;
+	right: 10%;
+	font-size: 10px;
+}
+
+.Item-inform .inform-show #lyric {
+	width: 100%;
+	height: 416px;
+	color: white;
+	text-align: center;
+}
+
+
+.tabPane {
+	margin-top: 10px;
+	width: 100%;
+	height: 380px;
+	display: block;
+	position: absolute;
+	overflow: hidden;
+}
+
+.tabPane li {
+	display: block;
+	position: absolute;
+	width: 100%;
+	/*border: 1px dotted #d8d8d8;*/
+}
+
+.tabPane li p{
+	line-height: 26px;
+	font-size: 20px;
+}
+
+
+/*#lyric p{
+	display: block;
+	height: 32px;
+	margin-bottom: 0px;
+}*/
+
+.inform-show #wrapper {
+	position: relative;
+	max-width: 100%;
+	opacity: 0.3;
+}
+
+.inform-show #wrapper:hover {
+	opacity: 1;
+}
