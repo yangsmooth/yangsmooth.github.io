@@ -16,35 +16,9 @@ img,
 fieldset {
 	border: 0 none;
 }
-.navbar-fixed-top {
-	height: 40px;
+.navbar-Header{
 	background-color: darkslateblue;
 }
-
-.navbar-inner {
-	width: 100%;
-}
-
-.navbar-inner .container-fiuled {
-	padding-top: 10px;
-	width: inherit;
-	height: 100%;
-}
-.nav-logo a {
-	color: black;
-	font-size: larger;
-}
-
-.nav-messages {
-	margin-left: 60px;
-}
-
-.nav-messages-list {
-	margin: auto 5px;
-	width: 30px;
-	display: inline;
-}
-
 .nav-messages-list a,
 .userMs,
 .navbar-form-a i{
@@ -62,10 +36,11 @@ fieldset {
 	display: inline;
 }
 
+.navbar-search{
+}
 .navbar-form-search {
 	height: 30px;
-	width: 200px;
-	margin-top: -5px;
+	width: 120px;
 	border-radius: 4px;
 	text-indent: 4px;
 	font-size: 12px;
@@ -85,16 +60,10 @@ fieldset {
 	color:black;
 }
 
-.nav-user .user-list {
+.nav-user .navbar-text {
 	margin-left: 10px;
-	float: left;
 }
 
-.user-list .userMs {
-	display: block;
-	height: 30px;
-	width: 28px;
-}
 .user-list .userImg{
 	display: block;
 	margin-top: -5px;
@@ -143,7 +112,11 @@ fieldset {
 	display: block;
 	padding-top: 5px;
 }
-
+.user-list .userMs {
+	display: block;
+	height: 30px;
+	width: 28px;
+}
 #user-image {
 	top: 20%;
 }
@@ -157,31 +130,37 @@ fieldset {
 }
 
 
+.main{
+	width: 100%;
+}
 /*main-left部分*/
 
 .main-left {
+	display: flex;
+	flex-direction: column;
 	padding-right: 0px;
 	border-right: 1px solid gainsboro;
 }
 
 .main-left-user {
-	display: block;
-	height: 100px;
-	margin: 0px 0px 10px 5px;
+	display: flex;
+	flex-wrap: nowrap;
+	margin: 10px 0px 10px 5px;
 }
 
 .main-left-user .userImg {
-	display: block;
-	position: absolute;
-	margin: 20px 5px 5px 15px;
 	border-radius: 50%;
 	width: 45px;
 	height: 45px;
 }
-
+.main-left-user .username{
+	display: flex;
+	flex-direction: column;
+	margin-left: 8px;
+}
 .main-left-user .username-name {
 	color: black;
-	padding: 15px 0px 5px 0px;
+	margin-bottom: 0px !important;
 }
 
 .main-left-user .username-introduce {
@@ -190,28 +169,38 @@ fieldset {
 	padding-right: 3px;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	max-height: 100px;
 }
 
 .main-left label {
 	color: gray;
 }
 
+/* 左边sidenavbar */
+.panel label{
+	text-indent: 0px;
+}
 #accordion .card-heading {
 	font-size: 13px;
-	padding-top: 14px;
+	padding-right: 20px;
+	display: flex;
+	align-items: center;
 	height: 40px;
 }
-
-#accordion .card-heading span {
-	margin-top: -3px;
+.sidetabbar-Item-text{
+	height: 20px;
+	line-height: 20px;
+}
+.badge{
+	font-size: 12px;
+	display: flex;
 	text-indent: 0px;
-	background-color: red;
+	align-items: center;
+	justify-content: center;
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	margin-right: 10px;
 }
-
 #accordion .card-heading:hover {
 	cursor: pointer;
 	background-color: gray;
@@ -258,11 +247,11 @@ fieldset {
 
 .hidepage-item .hidepage-item-label {
 	background-color: darkblue;
-	padding-top: 10px;
 	margin-bottom: 25px;
 	text-align: center;
 	width: inherit;
 	height: 40px;
+	line-height: 40px;
 	color: white;
 }
 
@@ -279,48 +268,30 @@ fieldset {
 
 .hidepage-item-name .badge {
 	color: white;
-	width: 18px;
-	height: 18px;
-	margin-top: -4px;
-	margin-right: 10px;
+	margin-right: 10px; 
 	background-color: darkblue;
-	border-radius: 50%;
 }
 
 .hidepage-item-name:hover {
 	background-color: gray;
 }
 
-.badge {
-	margin-top: 2px;
-}
 
+
+
+/* 主要内容 */
 .Item-inform {
 	display: none;
-	padding: 0px 15px 0px 0px;
 	background-color: white;
 }
-
-.Item-inform ul li {
-	margin: 6px 6px 4px 10px;
+.Item-inform .inform-view,
+.Item-inform .inform-manage {
+	display: flex;
+	align-items: center;
+	background-color: #DCDCDC;
 }
-
-.Item-inform ul li a i {
-	margin-top: 7px;
-}
-
-.Item-inform-setting {
-	position: absolute;
-	right: 5%;
-}
-
 .Item-inform-setting a i {
 	color: blue;
-}
-
-.content-btn {
-	position: absolute;
-	right: 5%;
 }
 
 .content-btn button {
@@ -332,15 +303,6 @@ fieldset {
 	display: block;
 	font-size: 13px;
 }
-
-.Item-inform .inform-view,
-.Item-inform .inform-manage {
-	/*display: block;*/
-	height: 40px;
-	padding-bottom: 5px;
-	background-color: #DCDCDC;
-}
-
 .Item-inform .inform-show {
 	padding-top: 30px;
 	font-size: 22px;
